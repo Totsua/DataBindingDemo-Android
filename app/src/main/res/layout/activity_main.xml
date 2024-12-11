@@ -21,13 +21,25 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="48sp"
+            android:textSize="30sp"
             android:hint="name"
             android:text="@{person.name}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nameEdit"
+            android:layout_width="112dp"
+            android:layout_height="54dp"
+            android:hint="enter"
+            android:text="@={person.name}"
+            app:layout_constraintBottom_toBottomOf="@+id/age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
 
         <TextView
             android:id="@+id/age"
@@ -41,6 +53,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
+         <EditText
+                    android:id="@+id/ageEdit"
+                    android:layout_width="116dp"
+                    android:layout_height="57dp"
+                    android:hint="enter"
+                    android:inputType="number"
+                    android:text="@={`` + person.age}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/age" />
+
+
         <TextView
             android:id="@+id/email"
             android:layout_width="wrap_content"
@@ -52,6 +77,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/emailEdit"
+            android:layout_width="112dp"
+            android:layout_height="53dp"
+            android:hint="enter"
+            android:text="@={person.email}"
+            app:layout_constraintBottom_toTopOf="@id/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
